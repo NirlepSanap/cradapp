@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'welcome_screen.dart'; // 🔁 Make sure this import path is correct
 
 class BusinessInfoScreen extends StatefulWidget {
   const BusinessInfoScreen({super.key});
@@ -25,8 +26,11 @@ class _BusinessInfoScreenState extends State<BusinessInfoScreen> {
         curve: Curves.easeInOut,
       );
     } else {
-      // Navigate to next screen (e.g., home, login, etc.)
-      Navigator.pop(context); // Replace with real navigation
+      // ✅ Navigate to Welcome screen
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const WelcomeScreen()),
+      );
     }
   }
 
@@ -44,7 +48,6 @@ class _BusinessInfoScreenState extends State<BusinessInfoScreen> {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          // Top Section with Image and Curve
           Expanded(
             flex: 3,
             child: Stack(
@@ -77,7 +80,6 @@ class _BusinessInfoScreenState extends State<BusinessInfoScreen> {
               ],
             ),
           ),
-          // Middle Section - Title Text
           Expanded(
             flex: 2,
             child: Center(
@@ -91,7 +93,6 @@ class _BusinessInfoScreenState extends State<BusinessInfoScreen> {
               ),
             ),
           ),
-          // Bottom Navigation
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
             child: Row(
@@ -140,7 +141,7 @@ class TopShapePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint paint = Paint()
-      ..color = Colors.grey[850]!
+      ..color = const Color(0xFF5C5C5C)
       ..style = PaintingStyle.fill;
 
     final Path path = Path();
