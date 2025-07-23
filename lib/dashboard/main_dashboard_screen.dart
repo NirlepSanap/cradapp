@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'people_screen.dart';
+import 'call_screen.dart';
+import 'profile_screen.dart';
+import 'tasks_screen.dart';
+import 'location_screen.dart';
 
 class MainDashboardScreen extends StatefulWidget {
   const MainDashboardScreen({super.key});
@@ -18,31 +23,43 @@ class _MainDashboardScreenState extends State<MainDashboardScreen> {
     
     switch (index) {
       case 0:
-        _showSnackBar('People/Users Screen');
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => PeopleScreen()));
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => const PeopleScreen())
+        );
         break;
       case 1:
-        _showSnackBar('Phone/Call Screen');
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => CallScreen()));
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => const CallScreen())
+        );
         break;
       case 2:
-        _showSnackBar('Profile Screen');
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => const ProfileScreen())
+        );
         break;
       case 3:
-        _showSnackBar('Location/Maps Screen');
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => LocationScreen()));
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => const LocationScreen())
+        );
         break;
       case 4:
-        _showSnackBar('Work/Tasks Screen');
-        // Navigator.push(context, MaterialPageRoute(builder: (context) => TasksScreen()));
+        Navigator.push(
+          context, 
+          MaterialPageRoute(builder: (context) => const TasksScreen())
+        );
         break;
     }
   }
 
   void _onProfileTapped() {
-    _showSnackBar('Profile Settings');
-    // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileSettingsScreen()));
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => const ProfileScreen())
+    );
   }
 
   void _onMenuTapped() {
