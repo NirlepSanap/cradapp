@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main_dashboard_screen.dart'; // replace with actual file
+import 'package:cradius_app/dashboard/main_dashboard_screen.dart'; // Import your main dashboard screen
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});

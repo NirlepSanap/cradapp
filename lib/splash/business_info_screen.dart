@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'welcome_screen.dart'; // 🔁 Make sure this import path is correct
+import 'welcome_screen.dart'; 
 
 class BusinessInfoScreen extends StatefulWidget {
   const BusinessInfoScreen({super.key});

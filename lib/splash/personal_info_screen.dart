@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'business_info_screen.dart'; // ✅ Import the actual next screen
+import 'business_info_screen.dart'; 
 
 class PersonalInfoScreen extends StatefulWidget {
   const PersonalInfoScreen({super.key});
